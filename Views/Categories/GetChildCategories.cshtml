@@ -1,0 +1,7 @@
+﻿@model IEnumerable<ShopMarket.Models.Category>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<div class="form-group">
+    <select name="ParentCategoryId[]" class="form-select" asp-items="@(new SelectList(Model,"Id","CategoryName"))">
+        <option value="0">None</option>
+    </select>
+</div>
